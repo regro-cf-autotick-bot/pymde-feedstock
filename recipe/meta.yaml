@@ -11,7 +11,7 @@ source:
   sha256: 958e1097ac473700111edfe44853b29c778d0ba19fb30616cf3e0ebd34087f7d
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
@@ -23,10 +23,10 @@ requirements:
     - pip
     - python
     - setuptools >=18.0
-    - numpy 1.17.5
+    - numpy
   run:
     - matplotlib-base
-    - numpy >=1.17.5
+    - {{ pin_compatible('numpy') }}
     - pynndescent
     - python
     - scipy
