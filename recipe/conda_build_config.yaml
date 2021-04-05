@@ -1,2 +1,2 @@
-channels_sources:
+channel_sources:
   - pytorch,conda-forge,defaults
