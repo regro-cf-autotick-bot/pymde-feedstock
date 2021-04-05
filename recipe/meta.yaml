@@ -29,7 +29,7 @@ requirements:
     - pynndescent
     - python
     - scipy
-    - pytorch
+    - pytorch >=1.7.1
     - torchvision
     - requests
 
