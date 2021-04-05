@@ -30,7 +30,7 @@ requirements:
     - python
     - scipy
     - pytorch >=1.7.1
-    - torchvision
+    - torchvision >=0.8.2
     - requests
 
 test:
