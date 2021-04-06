@@ -22,7 +22,7 @@ requirements:
     - pip
     - python
     - setuptools >=18.0
-    - numpy
+    - numpy >=1.17.5
   run:
     - matplotlib-base
     - {{ pin_compatible('numpy') }}
