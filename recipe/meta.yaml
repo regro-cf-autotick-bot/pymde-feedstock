@@ -11,9 +11,8 @@ source:
   sha256: e18d822b735cdd61b710057c4e08c49fd534fb90484a53ab151b0ea6cf3d4d6a
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [win]
 
 requirements:
   build:
@@ -23,15 +22,15 @@ requirements:
     - pip
     - python
     - setuptools >=18.0
-    - numpy
+    - numpy >=1.17.5
   run:
     - matplotlib-base
     - {{ pin_compatible('numpy') }}
     - pynndescent
     - python
     - scipy
-    - pytorch
-    - torchvision
+    - pytorch >=1.7.1
+    - torchvision >=0.8.2
     - requests
 
 test:
