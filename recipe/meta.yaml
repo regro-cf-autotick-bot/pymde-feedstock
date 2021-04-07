@@ -38,10 +38,12 @@ test:
   imports:
     - pymde
     - pymde.functions
-  commands:
-    - pip check
   requires:
     - pip
+    - pytest
+  commands:
+    - pip check
+    - pytest --pyargs pymde
 
 about:
   home: https://github.com/cvxgrp/pymde
