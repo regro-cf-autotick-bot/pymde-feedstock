@@ -40,7 +40,7 @@ requirements:
   run_constrained:
     # temporary fix for issue in pytorch feedstock
     # see https://github.com/conda-forge/pytorch-cpu-feedstock/issues/65
-    - pytorch-cpu >=1.7.1      # [osx]
+    - pytorch-cpu >=1.7.1
 
 test:
   imports:
