@@ -11,12 +11,16 @@ source:
   sha256: 24f3b8037b899b128818b9dfed365adcb20090704af5d2484668b6dc7f365662
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
+    - numpy >=1.17.5                         # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - cython
@@ -33,6 +37,10 @@ requirements:
     - pytorch >=1.7.1
     - torchvision >=0.8.2
     - requests
+  run_constrained:
+    # temporary fix for issue in pytorch feedstock
+    # see https://github.com/conda-forge/pytorch-cpu-feedstock/issues/65
+    - pytorch-cpu >=1.7.1
 
 test:
   imports:
