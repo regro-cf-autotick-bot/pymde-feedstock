@@ -1,5 +1,5 @@
 {% set name = "pymde" %}
-{% set version = "0.1.13" %}
+{% set version = "0.1.14" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymde-{{ version }}.tar.gz
-  sha256: 073b8f7845dfd8dfb523dbd3b26b7f6592e201b1437eead83b7021f7e255dda4
+  sha256: 2d38de526f453031c78908b3fc8206058b970d8579e4f503c9fd85fa9b8a10f9
 
 build:
   number: 0
