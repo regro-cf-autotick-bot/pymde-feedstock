@@ -20,14 +20,14 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
-    - numpy >=1.17.5                         # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - cython
     - pip
     - python
     - setuptools >=18.0
-    - numpy >=1.17.5
+    - numpy
   run:
     - matplotlib-base
     - {{ pin_compatible('numpy') }}
