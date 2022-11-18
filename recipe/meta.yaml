@@ -37,10 +37,6 @@ requirements:
     - pytorch >=1.7.1
     - torchvision >=0.8.2
     - requests
-  run_constrained:
-    # temporary fix for issue in pytorch feedstock
-    # see https://github.com/conda-forge/pytorch-cpu-feedstock/issues/65
-    - pytorch-cpu >=1.7.1
 
 test:
   imports:
