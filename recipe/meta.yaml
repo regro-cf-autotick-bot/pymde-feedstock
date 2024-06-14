@@ -11,7 +11,7 @@ source:
   sha256: 67f83fd269046a338dca1ebea71003a65b53c72467b6559bfc5eda30a86d3d33
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
@@ -22,6 +22,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cython
     - pip
@@ -30,7 +31,6 @@ requirements:
     - numpy
   run:
     - matplotlib-base
-    - {{ pin_compatible('numpy') }}
     - pynndescent
     - python
     - scipy
